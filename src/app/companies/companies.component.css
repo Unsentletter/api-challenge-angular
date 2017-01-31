@@ -20,3 +20,8 @@
   line-height: normal;
   border-bottom: 1px solid black;
 }
+
+.address {
+  line-height: normal;
+  padding-top: 70px;
+}
