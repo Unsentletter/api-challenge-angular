@@ -7,7 +7,7 @@ import { CompanyService } from './shared/company.service';
   template: `
     <div>
       <button (click)="loadCompany()">Load Company</button>
-      {{ company | json }}
+      {{ company | json}}
       </div>
   `
 
@@ -18,6 +18,6 @@ export class AppComponent {
 
   loadCompany() {
     console.log("clicked")
-    this.companyService.getCompanies().subscribe(data => this.company = data);
+    this.companyService.getCompanies().subscribe(data => this.company = data.data[0]);
   }
 }
