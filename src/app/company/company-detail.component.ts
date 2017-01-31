@@ -23,7 +23,7 @@ export class CompanyDetailComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.params
-    .switchMap((params: Params) => this.companyService.getCompany(+params['id']))
+    .switchMap((params: Params) => this.companyService.getCompany(+params['_id']))
     .subscribe(company => this.company = company);
   }
 

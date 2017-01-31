@@ -25,13 +25,13 @@ export class CompaniesComponent implements OnInit{
   ngOnInit():void {
     this.getCompanies();
   }
-  // 
+  //
   // onSelect(company:Company):void {
   //   this.selectedCompany = company;
   // }
 
   gotoDetail(company:Company): void {
     this.selectedCompany = company;
-    this.router.navigate(['/detail', this.selectedCompany.id]);
+    this.router.navigate(['/detail', this.selectedCompany._id]);
   }
 }
