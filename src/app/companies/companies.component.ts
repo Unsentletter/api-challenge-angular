@@ -11,7 +11,6 @@ import { Company } from '../company/company';
   styleUrls: ['./companies.component.css']
 })
 export class CompaniesComponent implements OnInit{
-  title = 'API CHALLENGE';
   companies: Company[];
   selectedCompany: Company;
 
@@ -26,12 +25,13 @@ export class CompaniesComponent implements OnInit{
   ngOnInit():void {
     this.getCompanies();
   }
+  // 
+  // onSelect(company:Company):void {
+  //   this.selectedCompany = company;
+  // }
 
-  onSelect(company:Company):void {
+  gotoDetail(company:Company): void {
     this.selectedCompany = company;
-  }
-
-  gotoDetail(): void {
     this.router.navigate(['/detail', this.selectedCompany.id]);
   }
 }

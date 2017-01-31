@@ -2,10 +2,12 @@
 <ul class="companies">
   <li *ngFor="let company of companies"
   [class.selected]="company === selectedCompany"
-  (click)="onSelect(company)">
+  (click)="gotoDetail(company)">
     <span class="badge">{{company.id}}</span>{{company.name}}
   </li>
 </ul>
+
+
 <div *ngIf="selectedCompany">
   <h2>{{selectedCompany.name | uppercase}}</h2>
   <button (click)="gotoDetail()">View Detail</button>
