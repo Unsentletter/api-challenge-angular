@@ -11,12 +11,14 @@ import { Company } from '../company/company';
   styleUrls: ['./companies.component.css']
 })
 export class CompaniesComponent implements OnInit{
+  title = 'API CHALLENGE'
   companies: Company[];
   selectedCompany: Company;
 
   constructor(
     private router: Router,
-    private companyService: CompanyService) {}
+    private companyService: CompanyService
+  ) {}
 
   getCompanies(): void {
     this.companyService.getCompanies().then(companies => this.companies = companies);

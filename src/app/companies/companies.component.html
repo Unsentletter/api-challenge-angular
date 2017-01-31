@@ -1,8 +1,31 @@
 <h1>{{title}}</h1>
-<ul class="companies">
-  <li *ngFor="let company of companies"
+
+<div class="row top">
+  <div class="col-md-2 top"></div>
+  <div class="col-md-2 top">Name</div>
+  <div class="col-md-2 top">Email</div>
+  <div class="col-md-2 top">Phone</div>
+  <div class="col-md-2 top">Status</div>
+  <div class="col-md-2 top">Address</div>
+</div>
+<div class="companies">
+  <div *ngFor="let company of companies"
   [class.selected]="company === selectedCompany"
   (click)="gotoDetail(company)">
-    {{company.display_name}}
-  </li>
-</ul>
+
+  <div class="row">
+    <div class="col-md-2 image"><img src={{company.logo.path_to_file}} /></div>
+    <div class="col-md-2 name">{{company.display_name}}</div>
+    <div class="col-md-2 email">{{company.email}}</div>
+    <div class="col-md-2 phone">{{company.phone}}</div>
+    <div class="col-md-2 status">{{company.status}}</div>
+    <div class="col-md-2 address">{{company.address.address1}} {{company.address.address2}} {{company.address.suburb}} {{company.address.postcode}} {{company.address.country}}</div>
+  </div>
+</div>
+</div>
+
+<!--
+
+
+
+   -->

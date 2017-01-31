@@ -7,7 +7,7 @@ import { CompanyDetailComponent} from './company/company-detail.component';
 const routes: Routes = [
   {path: '', redirectTo: '/companies', pathMatch: 'full'},
   {path: 'companies', component: CompaniesComponent},
-  {path: 'detail/:_id', component: CompanyDetailComponent}
+  {path: 'detail/:id', component: CompanyDetailComponent}
 ];
 
 @NgModule({
