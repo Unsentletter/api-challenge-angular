@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { Company } from '../company';
+import { Company } from '../company/company';
 import { COMPANIES } from '../mock-companies'
 
 @Injectable()

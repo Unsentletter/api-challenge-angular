@@ -2,12 +2,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { RouterModule } from '@angular/router'
+import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { CompanyDetailComponent } from './company-detail.component';
-import { CompaniesComponent } from './companies.component';
-import { CompanyService } from './shared/company.service';
+import { CompanyDetailComponent } from './company/company-detail.component';
+import { CompaniesComponent } from './companies/companies.component';
+import { CompanyService } from './services/company.service';
+
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -19,11 +21,7 @@ import { CompanyService } from './shared/company.service';
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot([
-      {path: '', redirectTo: '/companies', pathMatch: 'full'},
-      {path: 'companies', component: CompaniesComponent},
-      {path: 'detail/:id', component: CompanyDetailComponent}
-    ])
+    AppRoutingModule
   ],
   providers: [CompanyService],
   bootstrap: [AppComponent]

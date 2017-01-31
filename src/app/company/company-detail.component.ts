@@ -3,8 +3,8 @@ import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import 'rxjs/add/operator/switchMap';
 
-import { Company } from './company';
-import { CompanyService } from './shared/company.service';
+import { Company } from '../company/company';
+import { CompanyService } from '../services/company.service';
 
 @Component({
   selector: 'app-company-detail',
