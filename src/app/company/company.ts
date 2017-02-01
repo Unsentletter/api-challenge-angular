@@ -1,5 +1,5 @@
 export class Company {
-  _id: number;
+  _id: string;
   display_name: string;
   email: string;
   phone: number;

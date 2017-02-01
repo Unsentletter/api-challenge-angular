@@ -12,7 +12,6 @@
   <div *ngFor="let company of companies"
   [class.selected]="company === selectedCompany"
   (click)="gotoDetail(company)">
-
   <div class="row">
     <div class="col-md-2 image"><img src={{company.logo.path_to_file}} /></div>
     <div class="col-md-2 name">{{company.display_name}}</div>

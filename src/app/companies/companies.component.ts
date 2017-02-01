@@ -20,7 +20,7 @@ export class CompaniesComponent implements OnInit{
     private companyService: CompanyService
   ) {}
 
-  getCompanies(): void {
+  getCompanies() {
     this.companyService.getCompanies().then(companies => this.companies = companies);
   }
 

@@ -21,13 +21,13 @@ export class CompanyDetailComponent implements OnInit {
     private location: Location
   ) {}
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.route.params
     .switchMap((params: Params) => this.companyService.getCompany(+params['_id']))
     .subscribe(company => this.company = company);
   }
 
-  goBack(): void {
+  goBack() {
     this.location.back();
   }
 }
